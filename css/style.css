@@ -1,0 +1,43 @@
+* {
+  text-align: center;
+}
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80vw;
+  height: 80vh;
+  margin: 0 auto;
+  justify-content: start;
+  align-content: flex-start;
+}
+
+.square {
+  border: 1px solid black;
+  width: 18vw;
+  height: 18vh;
+}
+
+/* .column {
+  width: 20vw;
+  height: 20vh;
+  background-color: azure;
+}
+
+.row {
+  width: 20vw;
+  height: 20vh;
+  background-color: papayaWhip;
+} */
+/*
+.column-c {
+  width: 20vw;
+  height: 20vh;
+  background-color: darkturquoise;
+}
+
+.column-d {
+  width: 20vw;
+  height: 20vh;
+  background-color: cornsilk;
+} */
