@@ -1,3 +1,36 @@
+// creating buttons
+for (let i = 0; i < 4; i++) {
+  const button = document.createElement('div');
+  button.classList.add('button');
+  container.appendChild(button);
+}
+
+// trying to add ids to all the squares (doesn't work; i = undefined)
+const squares = document.querySelectorAll('.square');
+squares.map(function(square) {
+  square.setAttribute('id', squareIds[i]);
+})
+;
+
+// and again
+const squares = document.querySelectorAll('.square');
+for (let i = 0; i < squares.length; i++) {
+  squares.setAttribute('id', squareIds[i]);
+}
+
+const squares = document.querySelectorAll('.square');
+squares.forEach(function(square) {
+  squares.setAttribute('id', squareIds[i]);
+});
+
+for (let i = 0; i < squares.length; i++) {
+  for (let i = 0; i < squareIds.length; i++) {
+    squares.setAttribute('id', squareIds[i]);
+  }
+}
+
+
+
 // 13th & 14th Oct
 
 // console.log('we are on');

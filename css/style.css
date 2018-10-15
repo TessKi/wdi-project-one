@@ -4,18 +4,32 @@
 
 #container {
   display: flex;
+  flex-direction: column-reverse;
   flex-wrap: wrap;
   width: 80vw;
   height: 80vh;
   margin: 0 auto;
-  justify-content: start;
-  align-content: flex-start;
+  justify-content: flex-start;
+  align-content: center;
 }
 
 .square {
   border: 1px solid black;
   width: 18vw;
   height: 18vh;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.button {
+  background-color: red;
+  width: 15vw;
+  height: 10vh;
+  margin: 10px;
 }
 
 /* .column {
