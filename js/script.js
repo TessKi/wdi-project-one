@@ -38,22 +38,34 @@ function createSquares(numberOfSquares) {
 
 createSquares(16);
 
-// event listeners on the buttons
+const player1tokens = [];
+const player2tokens = [];
+
+// event listeners on the buttons and player interaction
 for (let i = 0; i < buttons.length; i++)
   buttons[i].addEventListener('click', function() {
     const buttonsId = event.target.id;
     const id = buttonsId + board[buttonsId];
-    console.log('the button id is...', id);
+    console.log('the button id is', id);
     const targetDiv = document.querySelector(`#${id}`);
-    console.log(targetDiv);
+    // console.log(targetDiv);
+    board[buttonsId] ++;
+
     if (currentPlayer) {
       targetDiv.classList.add('square-clicked-player1');
-      board[buttonsId] ++;
+      squareIds.isOccupied = 'player1';
+      player1tokens.push(id);
+      // console.log('targetDiv id', targetDiv.id);
+      // console.log('isOccupied is', squareIds.isOccupied);
+      console.log('player 1 has', player1tokens);
       currentPlayer = !currentPlayer;
-    }
-    else {
+    } else {
       targetDiv.classList.add('square-clicked-player2');
-      board[buttonsId] ++;
+      squareIds.isOccupied = 'player2';
+      player2tokens.push(id);
+      // console.log('targetDiv id', targetDiv.id);
+      // console.log('isOccupied is', squareIds.isOccupied);
+      console.log('player 2 has', player2tokens);
       currentPlayer = !currentPlayer;
     }
   });
