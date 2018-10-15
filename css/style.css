@@ -9,49 +9,40 @@
   width: 80vw;
   height: 80vh;
   margin: 0 auto;
-  justify-content: flex-start;
+  justify-content: center;
   align-content: center;
 }
 
 .square {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 18vw;
   height: 18vh;
+  border-radius: 100%;
+  background-color: yellow;
+  margin: 5px;
+}
+
+/* .square-clicked {
+  background-color: purple;
+} */
+
+.square-clicked-player1 {
+  background-color: green;
+}
+
+.square-clicked-player2 {
+  background-color: red;
 }
 
 .button-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: flex-start;
 }
 
 .button {
-  background-color: red;
-  width: 15vw;
-  height: 10vh;
+  background-color: purple;
+  width: 10vw;
+  height: 5vh;
   margin: 10px;
 }
-
-/* .column {
-  width: 20vw;
-  height: 20vh;
-  background-color: azure;
-}
-
-.row {
-  width: 20vw;
-  height: 20vh;
-  background-color: papayaWhip;
-} */
-/*
-.column-c {
-  width: 20vw;
-  height: 20vh;
-  background-color: darkturquoise;
-}
-
-.column-d {
-  width: 20vw;
-  height: 20vh;
-  background-color: cornsilk;
-} */

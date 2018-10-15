@@ -29,6 +29,17 @@ for (let i = 0; i < squares.length; i++) {
   }
 }
 
+// creating grid items
+let square;
+for (let i = 15; i >= 0; i--) {
+  // for (let i = 0; i < rows; i++) {
+  square = document.createElement('div');
+  square.classList.add('square');
+  container.appendChild(square);
+  square.setAttribute('id', squareIds[i]);
+  square.innerHTML = squareIds[i];
+}
+
 
 
 // 13th & 14th Oct
