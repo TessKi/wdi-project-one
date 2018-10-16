@@ -1,22 +1,38 @@
 const container = document.querySelector('#container');
+// const buttonContainer = document.querySelector('.button-container');
 const buttons = document.querySelectorAll('.button');
 
 const squareIds = []; // where all the square objects go
-const letters = ['a', 'b', 'c', 'd'];
+const letters = ['a', 'b', 'c', 'd', 'e']; // columns
 let currentLetterIndex = 0;
 let squareNumberId = 0;
 const board = {
   a: 1,
   b: 1,
   c: 1,
-  d: 1
+  d: 1,
+  e: 1
 };
 let currentPlayer = true;
 const player1tokens = [];
 const player2tokens = [];
 
-// squareLetters = Columns (numberOfColumns)
-// squareNumbers = Rows (numberOfRows)
+// creating buttons
+// function createButtons(numberOfColumns) {
+//   for (let i = 0; i < numberOfColumns; i++) {
+//     const button = document.createElement('div');
+//     button.classList.add('button');
+//     buttonContainer.appendChild(button);
+//     for (let i = 0; i < numberOfColumns; i++) {
+//       button.setAttribute('id', letters[i]);
+//       // console.log(`this is the new buttons ${button}`);
+//     }
+//   }
+// }
+// createButtons(4);
+
+// squareLetterId = Columns (numberOfColumns)
+// squareNumberId = Rows (numberOfRows)
 
 function createSquares(numberOfRows, numberOfColumns) {
   const numberOfSquares = numberOfRows * numberOfColumns;
@@ -42,7 +58,7 @@ function createSquares(numberOfRows, numberOfColumns) {
   }
 }
 
-createSquares(6, 6);
+createSquares(4, 4);
 
 // event listeners on the buttons and player interaction
 for (let i = 0; i < buttons.length; i++)
