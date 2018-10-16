@@ -16,6 +16,23 @@ const board = {
 let currentPlayer = true;
 const player1tokens = [];
 const player2tokens = [];
+let win = false;
+
+function verticalWin(array) {
+  return array.sort((a, b) => a > b).forEach((pos, index, arr) => {
+    if(index > array.length - 4) return;
+    if(parseInt(pos[1]) + 3 === parseInt(arr[index + 3][1])) {
+      return win = true;
+    }
+  });
+}
+
+function horizontalWin(array) {
+  return array.sort((a, b) => a[1] > b[1]).filter((pos, index, arr) => {
+    if(index === 0) return true;
+    return pos[1] === arr[index - 1][1];
+  }).length === 4;
+}
 
 // creating buttons
 // function createButtons(numberOfColumns) {
@@ -58,7 +75,7 @@ function createSquares(numberOfRows, numberOfColumns) {
   }
 }
 
-createSquares(4, 4);
+createSquares(5, 5);
 
 // event listeners on the buttons and player interaction
 for (let i = 0; i < buttons.length; i++)
@@ -95,15 +112,12 @@ for (let i = 0; i < buttons.length; i++)
 // WIN LOGIC, whaaaaa!
 
 function checkForWin() {
-
-  const squaresInPlay = squareIds.map(square => {
-    return { id: square.name, isOccupied: square.isOccupied };
-  }).reduce((object, square, index, array) => {
-
-  }, {});
+  verticalWin(player1tokens);
+  console.log('has player 1 won vertically?', win);
+  console.log('has player 1 won horizontally?', horizontalWin(player1tokens));
 
 
-  console.log(squaresInPlay);
+  // console.log(squaresInPlay);
 
 
 }
