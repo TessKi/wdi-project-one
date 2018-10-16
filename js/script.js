@@ -72,22 +72,38 @@ for (let i = 0; i < buttons.length; i++)
 
     if (currentPlayer) {
       targetDiv.classList.add('square-clicked-player1');
-      squareIds.isOccupied = 'player1';
+      squareIds.filter(square => square.name === id)[0].isOccupied = 'player1';
       player1tokens.push(id);
       // console.log('targetDiv id', targetDiv.id);
-      // console.log('isOccupied is', squareIds.isOccupied);
+      console.log('isOccupied is', squareIds);
       console.log('player 1 has', player1tokens);
       currentPlayer = !currentPlayer;
+      checkForWin();
 
     } else {
       targetDiv.classList.add('square-clicked-player2');
-      squareIds.isOccupied = 'player2';
+      squareIds.filter(square => square.name === id)[0].isOccupied = 'player2';
       player2tokens.push(id);
       // console.log('targetDiv id', targetDiv.id);
-      // console.log('isOccupied is', squareIds.isOccupied);
+      console.log('isOccupied is', squareIds.isOccupied);
       console.log('player 2 has', player2tokens);
       currentPlayer = !currentPlayer;
+      checkForWin();
     }
   });
 
 // WIN LOGIC, whaaaaa!
+
+function checkForWin() {
+
+  const squaresInPlay = squareIds.map(square => {
+    return { id: square.name, isOccupied: square.isOccupied };
+  }).reduce((object, square, index, array) => {
+
+  }, {});
+
+
+  console.log(squaresInPlay);
+
+
+}
