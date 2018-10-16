@@ -1,3 +1,22 @@
+// matt's win logic
+function verticalWin(array) {
+  return array.sort((a, b) => a > b).forEach((pos, index, arr) => {
+    if(index > array.length - 4) return;
+    if(parseInt(pos[1]) + 3 === parseInt(arr[index + 3][1])) {
+      return win = true;
+    }
+  });
+}
+
+function horizontalWin(array) {
+  return array.sort((a, b) => a[1] > b[1]).filter((pos, index, arr) => {
+    if(index === 0) return true;
+    return pos[1] === arr[index - 1][1];
+  }).length === 4;
+}
+
+
+
 // creating buttons
 for (let i = 0; i < 4; i++) {
   const button = document.createElement('div');

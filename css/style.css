@@ -4,22 +4,32 @@
 
 #container {
   display: flex;
-  flex-direction: column-reverse;
-  flex-wrap: wrap;
-  width: 100vw;
-  height: 100vh;
+  flex-direction: row;
+  width: 80vw;
+  height: 60vh;
   margin: 0 auto;
   justify-content: center;
   align-content: center;
 }
 
+.button-container {
+  margin: 0 auto;
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .square {
   /* border: 1px solid black; */
-  width: 18vw;
-  height: 18vh;
+  flex-grow: 1;
   border-radius: 50%;
   background-color: yellow;
   margin: 5px;
+}
+
+.column {
+  flex-grow: 1;
 }
 
 /* .square-clicked {
@@ -32,12 +42,6 @@
 
 .square-clicked-player2 {
   background-color: red;
-}
-
-.button-container {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: flex-start;
 }
 
 .button {
