@@ -20,7 +20,7 @@ function createButtons(numberOfColumns) {
     button.classList.add('button');
     const letter = 'abcdefghijklmnopqrstuvwxyz'[i];
     button.id = letter;
-    button.textContent = letter.toUpperCase();
+    // button.textContent = letter.toUpperCase();
     buttonContainer.appendChild(button);
     button.addEventListener('click', handleButtonClick);
   }
@@ -45,7 +45,8 @@ function createSquares(numberOfRows, numberOfColumns) {
     for (let rowNumber = 0; rowNumber < numberOfRows; rowNumber++) {
       const newObject = {
         name: `${squareLetterId}${numberOfRows - rowNumber}`,
-        row: rowNumber, column: columnNumber,
+        row: rowNumber,
+        column: columnNumber,
         isOccupied: null,
         domElement: document.createElement('div')
       };
@@ -53,7 +54,7 @@ function createSquares(numberOfRows, numberOfColumns) {
       newObject.domElement.setAttribute('id', newObject.name);
       newObject.domElement.setAttribute('row', rowNumber);
       newObject.domElement.setAttribute('column', columnNumber);
-      newObject.domElement.innerHTML = newObject.name;
+      // newObject.domElement.innerHTML = newObject.name;
       squareIds.push(newObject);
       columnDiv.appendChild(newObject.domElement);
     }
