@@ -14,7 +14,91 @@ function horizontalWin(array) {
     return pos[1] === arr[index - 1][1];
   }).length === 4;
 }
+// ===================================================================
 
+// function verticalWinMatt(array) {
+//
+//   // return array.sort((a, b) => a > b).forEach((pos, index, arr) => {
+//   //   if(index > array.length - 4) return;
+//   //   if(parseInt(pos[1]) + 3 === parseInt(arr[index + 3][1])) {
+//   //     return win = true;
+//   //   }
+//   // });
+//
+//   let verticalWinResult = false;
+//
+//   const newArray = array.map(pos => {
+//     const letterNumber = rows.indexOf(pos[0]) + 1;
+//     return [letterNumber, parseInt(pos[1])];
+//   });
+//
+//   const sortedAndFilteredVertically = newArray.sort((a, b) => a[0] > b[0]).filter((posArray, index, array) => {
+//     if(index === 0) return true;
+//     return posArray[0] !== array[index -1][0];
+//   });
+//
+//   if(sortedAndFilteredVertically.length > 4) {
+//     const verticalOK = parseInt(sortedAndFilteredVertically[0][0]) + 3 === sortedAndFilteredVertically[3][0];
+//     verticalWinResult = verticalOK;
+//   }
+//
+//   return verticalWinResult;
+// }
+//
+// function horizontalWinMatt(array) {
+//   // return array.sort((a, b) => a[1] > b[1]).filter((pos, index, arr) => {
+//   //   if(index === 0) return true;
+//   //   return pos[1] === arr[index - 1][1];
+//   // }).length === 4;
+//
+//   let horizontalWinResult = false;
+//
+//   const newArray = array.map(pos => {
+//     const letterNumber = rows.indexOf(pos[0]) + 1;
+//     return [letterNumber, parseInt(pos[1])];
+//   });
+//
+//   const sortedAndFilteredHorizontal = newArray.sort((a, b) => a[1] > b[1]).filter((posArray, index, array) => {
+//     if(index === 0) return true;
+//     return posArray[1] !== array[index -1][1];
+//   });
+//
+//   if(sortedAndFilteredHorizontal.length > 4) {
+//     const horizontalOK = parseInt(sortedAndFilteredHorizontal[0][1]) + 3 === sortedAndFilteredHorizontal[3][1];
+//     horizontalWinResult = horizontalOK;
+//   }
+//
+//   return horizontalWinResult;
+// }
+//
+// function diagonalWinMatt(array) {
+//   let diagonalWinResult = false;
+//
+//   const newArray = array.map(pos => {
+//     const letterNumber = rows.indexOf(pos[0]) + 1;
+//     return [letterNumber, parseInt(pos[1])];
+//   });
+//
+//   const sortedAndFilteredVertically = newArray.sort((a, b) => a[0] > b[0]).filter((posArray, index, array) => {
+//     if(index === 0) return true;
+//     return posArray[0] !== array[index -1][0];
+//   });
+//
+//   const sortedAndFilteredHorizontal = newArray.sort((a, b) => a[1] > b[1]).filter((posArray, index, array) => {
+//     if(index === 0) return true;
+//     return posArray[1] !== array[index -1][1];
+//   });
+//
+//   if(sortedAndFilteredVertically.length > 4 || sortedAndFilteredHorizontal.length > 4) {
+//     const verticalOK = parseInt(sortedAndFilteredVertically[0][0]) + 3 === sortedAndFilteredVertically[3][0];
+//     const horizontalOK = parseInt(sortedAndFilteredHorizontal[0][1]) + 3 === sortedAndFilteredHorizontal[3][1];
+//     diagonalWinResult = verticalOK && horizontalOK;
+//   }
+//
+//   return diagonalWinResult;
+// }
+
+// =======================================================================
 
 
 // creating buttons
