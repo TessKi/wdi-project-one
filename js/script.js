@@ -96,7 +96,8 @@ function checkForWin() {
   if(winner) {
     const logBox = document.getElementById('log');
     logBox.classList.remove('hide-on-start');
-    logBox.textContent = 'Winner is player ' + winner;
+    logBox.textContent = `Player ${winner} wins!!!`;
+    buttonContainer.classList.add('buttons-hide');
     const buttons = document.querySelectorAll('.button');
     buttons.forEach(button => {
       button.removeEventListener('click', handleButtonClick);

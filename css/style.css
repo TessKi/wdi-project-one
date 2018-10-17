@@ -23,6 +23,10 @@ p {
   justify-content: center;
 }
 
+.buttons-hide {
+  display: none;
+}
+
 .button {
   /* background-color: white; */
   width: 60px;
@@ -87,4 +91,5 @@ p {
   font-weight: bold;
   width: 50%;
   margin: 0 auto;
+  padding: .75em;
 }
