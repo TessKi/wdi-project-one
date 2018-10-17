@@ -8,6 +8,7 @@ h1 {
   font-weight: bold;
   font-size: 3.5em;
   margin: .25em;
+  color: #6938AD;
 }
 
 p {
@@ -34,8 +35,8 @@ p {
   border-radius: 50%;
   margin: 5px;
   padding: 3px;
-  background-color: green;
-  border: 1px solid black;
+  background-color: #C4F23F;
+  border: 1px solid #6938AD;
   opacity: 0;
 }
 
@@ -50,35 +51,30 @@ p {
 }
 
 .column {
-  background-color: grey;
+  background-color: #B49CD7;
   padding: 3px;
 }
 
 .square {
   border-radius: 50%;
-  border: 1px solid black;
-  background-color: yellow;
+  border: 1px solid #6938AD;
+  background-color: #FDE500;
   margin: 5px;
   height: 60px;
   width: 60px;
 }
 
-/* .button-player1 {
-  background-color: green;
-  opacity: 0;
-} */
-
 .button-player2 {
-  background-color: red;
+  background-color: #BE3197;
   opacity: 0;
 }
 
 .clicked-player1 {
-  background-color: green;
+  background-color: #C4F23F;
 }
 
 .clicked-player2 {
-  background-color: red;
+  background-color: #BE3197;
 }
 
 .hide-on-start {
@@ -86,10 +82,25 @@ p {
 }
 
 #log {
-  color: purple;
-  font-size: xx-large;
+  color: #6938AD;
+  font-size: 3em;
   font-weight: bold;
-  width: 50%;
+  width: 75%;
   margin: 0 auto;
-  padding: .75em;
+  padding: 0.5em;
+  animation: yay 3s;
+}
+
+@keyframes yay {
+  0% {
+    font-size: 3em;
+  }
+
+  50% {
+    font-size: 4em;
+  }
+
+  100% {
+    font-size: 3em;
+  }
 }

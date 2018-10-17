@@ -102,6 +102,11 @@ function checkForWin() {
     buttons.forEach(button => {
       button.removeEventListener('click', handleButtonClick);
     });
+    if (winner === 1) {
+      logBox.setAttribute('style', 'color: #C4F23F');
+    } else {
+      logBox.setAttribute('style', 'color: #BE3197');
+    }
     // showModal();
   }
 }
