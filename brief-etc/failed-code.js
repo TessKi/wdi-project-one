@@ -1,3 +1,20 @@
+// function togglePlayerTokens() {
+//   if (currentPlayer) {
+//     const buttons = document.querySelectorAll('.button');
+//     buttons.forEach(button => {
+//       button.classList.add('button-player1');
+//     });
+//   } else {
+//     const buttons = document.querySelectorAll('.button');
+//     buttons.forEach(button => {
+//       button.classList.remove('button-player1');
+//       button.classList.add('button-player2');
+//     });
+//   }
+// }
+// togglePlayerTokens();
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 // matt's win logic
 function verticalWin(array) {
   return array.sort((a, b) => a > b).forEach((pos, index, arr) => {

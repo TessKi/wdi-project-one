@@ -1,5 +1,21 @@
 * {
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: bold;
+  font-size: 3.5em;
+  margin: .25em;
+}
+
+p {
+  margin: 0 10% 0 10%;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .button-container {
@@ -14,6 +30,9 @@
   border-radius: 50%;
   margin: 5px;
   padding: 3px;
+  background-color: green;
+  border: 1px solid black;
+  opacity: 0;
 }
 
 .button:hover {
@@ -23,6 +42,7 @@
 #container {
   display: flex;
   justify-content: center;
+  margin-bottom: 1em;
 }
 
 .column {
@@ -39,10 +59,10 @@
   width: 60px;
 }
 
-.button-player1 {
+/* .button-player1 {
   background-color: green;
   opacity: 0;
-}
+} */
 
 .button-player2 {
   background-color: red;

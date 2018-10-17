@@ -1,16 +1,8 @@
-// const container = document.querySelector('#container');
 const buttonContainer = document.querySelector('.button-container');
 
 const squareIds = []; // where all the square objects go
-// const letters = ['a', 'b', 'c', 'd', 'e']; // columns
-// const currentLetterIndex = 0;
-// const squareNumberId = 0;
 const columnHeights = {};
 let currentPlayer = true;
-// const player1tokens = [];
-// const player2tokens = [];
-let win = false;
-// const rows = ['a', 'b', 'c', 'd', 'e'];
 
 // creating buttons
 function createButtons(numberOfColumns) {
@@ -29,11 +21,8 @@ const columnCount = 7;
 const rowCount = 7;
 createSquares(rowCount, columnCount);
 createButtons(columnCount);
-// squareLetterId -> Columns (numberOfColumns)
-// squareNumberId -> Rows (numberOfRows)
 
 function createSquares(numberOfRows, numberOfColumns) {
-  // const numberOfSquares = numberOfRows * numberOfColumns;
   for (let columnNumber = 0; columnNumber < numberOfColumns; columnNumber++) {
     const columnDiv = document.createElement('div');
     columnDiv.classList = 'column';
@@ -52,7 +41,6 @@ function createSquares(numberOfRows, numberOfColumns) {
       newObject.domElement.setAttribute('id', newObject.name);
       newObject.domElement.setAttribute('row', rowNumber);
       newObject.domElement.setAttribute('column', columnNumber);
-      // newObject.domElement.innerHTML = newObject.name;
       squareIds.push(newObject);
       columnDiv.appendChild(newObject.domElement);
     }
@@ -61,33 +49,26 @@ function createSquares(numberOfRows, numberOfColumns) {
   }
 }
 
-// mouseover changes with players --- doesn't work
-// buttonContainer.addEventListener('mouseover', function() {
-//   // console.log(`anything? ${event}`);
-//   event.target.style.backgrounColor = 'purple';
-// });
+// if (currentPlayer) {
+//   const buttons = document.querySelectorAll('.button');
+//   buttons.forEach(button => {
+//     button.classList.toggle('.button-player2');
+//   });
+// }
 
 // event listeners on the buttons and player interaction
-if (currentPlayer) {
-  const buttons = document.querySelectorAll('.button');
-  buttons.forEach(button => {
-    button.classList.add('button-player1');
-  });
-} else {
-  const buttons = document.querySelectorAll('.button');
-  buttons.forEach(button => {
-    button.classList.add('button-player2');
-  });
-}
-
 function handleButtonClick(event) {
   const buttonsId = event.target.id;
   const id = buttonsId + columnHeights[buttonsId];
   const targetDiv = document.querySelector(`#${id}`);
-  // console.log(targetDiv);
   columnHeights[buttonsId] ++;
 
   if (currentPlayer) {
+    const buttons = document.querySelectorAll('.button');
+    buttons.forEach(button => {
+      button.classList.remove('button-player1');
+      button.classList.add('button-player2');
+    });
     targetDiv.classList.add('clicked-player1');
     targetDiv.setAttribute('player', 1);
     squareIds.filter(square => square.name === id)[0].isOccupied = 'player1';
@@ -95,10 +76,14 @@ function handleButtonClick(event) {
     checkForWin();
 
   } else {
+    const buttons = document.querySelectorAll('.button');
+    buttons.forEach(button => {
+      button.classList.remove('button-player2');
+      button.classList.add('button-player1');
+    });
     targetDiv.classList.add('clicked-player2');
     targetDiv.setAttribute('player', 2);
     squareIds.filter(square => square.name === id)[0].isOccupied = 'player2';
-    // player2tokens.push(id);
     currentPlayer = !currentPlayer;
     checkForWin();
   }
@@ -116,6 +101,7 @@ function checkForWin() {
     buttons.forEach(button => {
       button.removeEventListener('click', handleButtonClick);
     });
+    // showModal();
   }
 }
 
@@ -183,3 +169,7 @@ function elementsAreAllOwnedByPlayer(elements) {
 function getElementAt(row, column) {
   return document.querySelector(`[row="${row}"][column="${column}"]`);
 }
+
+// function showModal() {
+//
+// }
