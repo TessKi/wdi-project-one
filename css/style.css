@@ -88,6 +88,8 @@ p {
   width: 75%;
   margin: 0 auto;
   padding: 0.5em;
+  height: 1em;
+  line-height: 1em;
   animation: yay 3s;
 }
 
