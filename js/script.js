@@ -1,11 +1,10 @@
 // const container = document.querySelector('#container');
 const buttonContainer = document.querySelector('.button-container');
-// const buttons = document.querySelectorAll('.button');
 
 const squareIds = []; // where all the square objects go
-const letters = ['a', 'b', 'c', 'd', 'e']; // columns
-const currentLetterIndex = 0;
-const squareNumberId = 0;
+// const letters = ['a', 'b', 'c', 'd', 'e']; // columns
+// const currentLetterIndex = 0;
+// const squareNumberId = 0;
 const columnHeights = {};
 let currentPlayer = true;
 // const player1tokens = [];
@@ -30,9 +29,8 @@ const columnCount = 7;
 const rowCount = 7;
 createSquares(rowCount, columnCount);
 createButtons(columnCount);
-
-// squareLetterId = Columns (numberOfColumns)
-// squareNumberId = Rows (numberOfRows)
+// squareLetterId -> Columns (numberOfColumns)
+// squareNumberId -> Rows (numberOfRows)
 
 function createSquares(numberOfRows, numberOfColumns) {
   // const numberOfSquares = numberOfRows * numberOfColumns;
@@ -63,8 +61,25 @@ function createSquares(numberOfRows, numberOfColumns) {
   }
 }
 
+// mouseover changes with players --- doesn't work
+// buttonContainer.addEventListener('mouseover', function() {
+//   // console.log(`anything? ${event}`);
+//   event.target.style.backgrounColor = 'purple';
+// });
 
 // event listeners on the buttons and player interaction
+if (currentPlayer) {
+  const buttons = document.querySelectorAll('.button');
+  buttons.forEach(button => {
+    button.classList.add('button-player1');
+  });
+} else {
+  const buttons = document.querySelectorAll('.button');
+  buttons.forEach(button => {
+    button.classList.add('button-player2');
+  });
+}
+
 function handleButtonClick(event) {
   const buttonsId = event.target.id;
   const id = buttonsId + columnHeights[buttonsId];
@@ -76,7 +91,6 @@ function handleButtonClick(event) {
     targetDiv.classList.add('clicked-player1');
     targetDiv.setAttribute('player', 1);
     squareIds.filter(square => square.name === id)[0].isOccupied = 'player1';
-    // player1tokens.push(id);
     currentPlayer = !currentPlayer;
     checkForWin();
 
@@ -93,12 +107,15 @@ function handleButtonClick(event) {
 // WIN CONDITIONS:
 
 function checkForWin() {
-  // console.log('has player 1 won diagonally?', diagonalWin(player1tokens));
-  // console.log('has player 1 won vertically?', verticalWin(player1tokens));
   const winner = horizontalWin() || verticalWin();
   if(winner) {
-    document.getElementById('log').classList.remove('hide-on-start');
-    document.getElementById('log').textContent = 'Winner is player ' + winner;
+    const logBox = document.getElementById('log');
+    logBox.classList.remove('hide-on-start');
+    logBox.textContent = 'Winner is player ' + winner;
+    const buttons = document.querySelectorAll('.button');
+    buttons.forEach(button => {
+      button.removeEventListener('click', handleButtonClick);
+    });
   }
 }
 
