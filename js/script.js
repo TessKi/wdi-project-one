@@ -11,7 +11,6 @@ function createButtons(numberOfColumns) {
     button.classList.add('button');
     const letter = 'abcdefghijklmnopqrstuvwxyz'[i];
     button.id = letter;
-    // button.textContent = letter.toUpperCase();
     buttonContainer.appendChild(button);
     button.addEventListener('click', handleButtonClick);
   }
@@ -48,13 +47,6 @@ function createSquares(numberOfRows, numberOfColumns) {
     container.appendChild(columnDiv);
   }
 }
-
-// if (currentPlayer) {
-//   const buttons = document.querySelectorAll('.button');
-//   buttons.forEach(button => {
-//     button.classList.toggle('.button-player2');
-//   });
-// }
 
 // event listeners on the buttons and player interaction
 function handleButtonClick(event) {
@@ -107,7 +99,6 @@ function checkForWin() {
     } else {
       logBox.setAttribute('style', 'color: #BE3197');
     }
-    // showModal();
   }
 }
 
@@ -175,7 +166,3 @@ function elementsAreAllOwnedByPlayer(elements) {
 function getElementAt(row, column) {
   return document.querySelector(`[row="${row}"][column="${column}"]`);
 }
-
-// function showModal() {
-//
-// }

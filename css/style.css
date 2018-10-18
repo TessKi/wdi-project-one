@@ -29,7 +29,6 @@ p {
 }
 
 .button {
-  /* background-color: white; */
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -90,10 +89,10 @@ p {
   padding: 0.5em;
   height: 1em;
   line-height: 1em;
-  animation: yay 3s;
+  animation: win 3s;
 }
 
-@keyframes yay {
+@keyframes win {
   0% {
     font-size: 3em;
   }
