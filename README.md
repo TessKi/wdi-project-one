@@ -7,6 +7,7 @@
 A two-player grid-based game rendered in the browser, made using HTML, CSS and JavaScript learnt in the first three weeks of the WDI course.  
 [Play the game online](https://terezakinnert.github.io/wdi-project-1/)
 
+
 ### Table of Contents
 
 - [Description](#description)
@@ -63,7 +64,7 @@ Users unfortunately can't win diagonally, yet. The game's complexity wasn't full
 The user experience of the game could also be improved: instructions on a separate screen with a button to start the game, button to reset the game when it finishes, etc.
 
 
-### Challenges and Wins
+## Challenges and Wins
 
 We started this project two and a half weeks into our coding bootcamp, after only a little over a week of learning JavaScript. To get to a functioning game after that is a win enough for me. There were a lot of challenging moments during, but that's what the learning process is like 🤓.
 
