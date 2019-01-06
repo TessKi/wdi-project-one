@@ -26,12 +26,12 @@ A two-player grid-based game rendered in the browser, made using HTML, CSS and J
 
 The project's requirements were as follows:  
 
-- Render a game in the browser.
-- Switch turns between two players.
-- Design logic for winning & visually display which player won.
-- Include separate HTML / CSS / JavaScript files.
-- Use Javascript or jQuery for DOM manipulation.
-- Deploy your game online, using GitHub Pages.
+- [x] Render a game in the browser.
+- [x] Switch turns between two players.
+- [x] Design logic for winning & visually display which player won.
+- [x] Include separate HTML / CSS / JavaScript files.
+- [x] Use Javascript or jQuery for DOM manipulation.
+- [x] Deploy your game online, using GitHub Pages.
 
 
 ### Tools and Technologies Used
@@ -83,4 +83,4 @@ If I had more time I would:
 
 ## Contact
 
-Feel free to see my [Portfolio](http://terezakinnert.com/) with more projects, or [LinkedIn profile](https://www.linkedin.com/in/terezakinnert/).
+Feel free to check out my [Portfolio](http://terezakinnert.com/) with more projects, or [LinkedIn profile](https://www.linkedin.com/in/terezakinnert/).
