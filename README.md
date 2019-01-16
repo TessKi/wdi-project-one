@@ -5,7 +5,7 @@
 #### General Assembly's Web Development Immersive: Project 1
 
 A two-player grid-based game rendered in the browser, made using HTML, CSS and JavaScript learnt in the first three weeks of the WDI course.  
-[Play the game online](https://terezakinnert.github.io/wdi-project-1/)
+[Play the game online](https://terezakinnert.github.io/ga-1-connect4/)
 
 
 ### Table of Contents
